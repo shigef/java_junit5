@@ -3,7 +3,7 @@ package tddbc;
 public class Sample {
 
     public String say() {
-        return "Hello TDD BootCamp! git test";
+        return "Hello!! TDD BootCamp! git test";
     }
 
 }

@@ -15,7 +15,7 @@ public class SampleTest {
         // Exercise
         String actual = sut.say();
         // Verify
-        assertEquals("Hello TDD BootCamp! git test", actual);
+        assertEquals("Hello!! TDD BootCamp! git test", actual);
     }
 
 }
