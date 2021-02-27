@@ -1,8 +1,9 @@
 package tddbc;
 
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 public class SampleTest {
 
@@ -14,7 +15,7 @@ public class SampleTest {
         // Exercise
         String actual = sut.say();
         // Verify
-        assertEquals("Hello TDD BootCamp!", actual);
+        assertEquals("Hello TDD BootCamp! git test", actual);
     }
 
 }
