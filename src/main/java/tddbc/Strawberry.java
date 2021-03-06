@@ -1,11 +1,22 @@
 package tddbc;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Strawberry {
 
 	/** いちごの品種 */
 	public String variety;
 	/** いちごのサイズ */
 	public String size;
+
+	List<String> varieties = new ArrayList<String>() {
+		{
+			add("あまおう");
+			add("とちおとめ");
+			add("もういっこ");
+		}
+	};
 
 	/**
 	 * いちごを表すクラス.
