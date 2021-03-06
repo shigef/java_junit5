@@ -40,4 +40,16 @@ public class StrawberryTest {
         assertEquals("あまおう: S", actual);
     }
 
+    @Test
+    @DisplayName("いちごを生成する際に品種に想定外(いちご)の値を受け取ると例外を発生させること")
+    public void いちごを生成する際に品種に想定外_いちご_の値を受け取ると例外を発生させること() throws Exception {
+        // Setup
+        Strawberry sut = new Strawberry("いちご", "S");
+        // Exercise
+        String actual = sut.size;
+        // Verify
+        assertEquals("S", actual);
+
+    }
+
 }
