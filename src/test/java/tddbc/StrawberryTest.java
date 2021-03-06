@@ -13,7 +13,7 @@ public class StrawberryTest {
         // Setup
         Strawberry sut = new Strawberry("あまおう", "S");
         // Exercise
-        String actual = sut.size;
+        String actual = sut.getSize();
         // Verify
         assertEquals("S", actual);
     }

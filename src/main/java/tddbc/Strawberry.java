@@ -9,7 +9,7 @@ public class Strawberry {
 	/** いちごの品種 */
 	private String variety;
 	/** いちごのサイズ */
-	public String size;
+	private String size;
 
 	static List<String> varieties = new ArrayList<String>() {
 		{
