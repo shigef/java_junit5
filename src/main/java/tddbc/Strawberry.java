@@ -17,8 +17,7 @@ public class Strawberry {
 		this.size = size;
 	}
 
-	@Override
-	public String toString() {
+	public String getVarietyAndSize() {
 		return variety + ": " + size;
 	}
 }
