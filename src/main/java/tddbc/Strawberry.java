@@ -7,7 +7,7 @@ public class Strawberry {
 
 
 	/** いちごの品種 */
-	public String variety;
+	private String variety;
 	/** いちごのサイズ */
 	public String size;
 
