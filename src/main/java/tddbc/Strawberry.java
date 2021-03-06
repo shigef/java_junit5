@@ -17,4 +17,7 @@ public class Strawberry {
 		this.size = size;
 	}
 
+	public String toString() {
+		return variety + ": " + size;
+	}
 }
