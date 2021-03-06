@@ -48,7 +48,8 @@ public class StrawberryTest {
         // Exercise
         String actual = sut.size;
         // Verify
-        assertEquals("S", actual);
+        Exception e = assertThrows(IllegalArgumentException.class, () -> new Strawberry("いちご", "S"));
+        assertEquals("想定外の品種が指定されました: いちご", e.getMessage());
 
     }
 
