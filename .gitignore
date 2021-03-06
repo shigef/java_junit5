@@ -28,3 +28,6 @@ out/
 .classpath
 .project
 .settings/
+
+# 20210306 add
+bin/
