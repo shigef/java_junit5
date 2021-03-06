@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Strawberry {
 
+
 	/** いちごの品種 */
 	public String variety;
 	/** いちごのサイズ */
@@ -44,5 +45,13 @@ public class Strawberry {
 
 	public String getVarietyAndSize() {
 		return variety + ": " + size;
+	}
+
+	public String getVariety() {
+		return variety;
+	}
+
+	public String getSize() {
+		return size;
 	}
 }

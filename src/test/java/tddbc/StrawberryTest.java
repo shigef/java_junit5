@@ -24,7 +24,7 @@ public class StrawberryTest {
         // Setup
         Strawberry sut = new Strawberry("あまおう", "S");
         // Exercise
-        String actual = sut.variety;
+        String actual = sut.getVariety();
         // Verify
         assertEquals("あまおう", actual);
     }
