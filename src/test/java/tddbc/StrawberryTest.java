@@ -43,14 +43,8 @@ public class StrawberryTest {
     @Test
     @DisplayName("いちごを生成する際に品種に想定外(いちご)の値を受け取ると例外を発生させること")
     public void いちごを生成する際に品種に想定外_いちご_の値を受け取ると例外を発生させること() throws Exception {
-        // Setup
-        Strawberry sut = new Strawberry("いちご", "S");
-        // Exercise
-        String actual = sut.size;
-        // Verify
         Exception e = assertThrows(IllegalArgumentException.class, () -> new Strawberry("いちご", "S"));
         assertEquals("想定外の品種が指定されました: いちご", e.getMessage());
-
     }
 
 }

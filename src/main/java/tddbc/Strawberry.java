@@ -13,6 +13,7 @@ public class Strawberry {
 	 * @param size いちごのサイズ
 	 */
 	public Strawberry(String variety, String size) {
+		if ("いちご".equals(variety)) throw new IllegalArgumentException("想定外の品種が指定されました: いちご");
 		this.variety = variety;
 		this.size = size;
 	}
