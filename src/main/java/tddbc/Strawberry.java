@@ -17,6 +17,7 @@ public class Strawberry {
 		this.size = size;
 	}
 
+	@Override
 	public String toString() {
 		return variety + ": " + size;
 	}
