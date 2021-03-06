@@ -4,8 +4,16 @@ public class Strawberry {
 
 	public String size;
 
-	public Strawberry(String string, String string2) {
-		// TODO 自動生成されたコンストラクター・スタブ
+	public String variety;
+
+	/**
+	 *
+	 * @param variety
+	 * @param size
+	 */
+	public Strawberry(String variety, String size) {
+		this.variety = variety;
+		this.size = size;
 	}
 
 }
