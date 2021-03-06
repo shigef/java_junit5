@@ -47,4 +47,11 @@ public class StrawberryTest {
         assertEquals("想定外の品種が指定されました: いちご", e.getMessage());
     }
 
+    @Test
+    @DisplayName("いちごを生成する際にサイズに想定外(XL)の値を受け取ると例外を発生させること")
+    public void いちごを生成する際にサイズに想定外_XL_の値を受け取ると例外を発生させること() throws Exception {
+        Exception e = assertThrows(IllegalArgumentException.class, () -> new Strawberry("あまおう", "XL"));
+        assertEquals("想定外のサイズが指定されました: XL", e.getMessage());
+    }
+
 }
