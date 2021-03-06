@@ -2,14 +2,15 @@ package tddbc;
 
 public class Strawberry {
 
+	/** いちごの品種 */
+	public String variety;
+	/** いちごのサイズ */
 	public String size;
 
-	public String variety;
-
 	/**
-	 *
-	 * @param variety
-	 * @param size
+	 * いちごを表すクラス.
+	 * @param variety いちごの品種
+	 * @param size いちごのサイズ
 	 */
 	public Strawberry(String variety, String size) {
 		this.variety = variety;
