@@ -27,6 +27,8 @@ public class Strawberry {
 		// 想定外の品種の場合はオブジェクトを生成しない
 		if (!varieties.contains(variety))
 			throw new IllegalArgumentException("想定外の品種が指定されました: " + variety);
+		if ("XL".equals(size))
+			throw new IllegalArgumentException("想定外のサイズが指定されました: " + size);
 		this.variety = variety;
 		this.size = size;
 	}
