@@ -10,7 +10,7 @@ public class Strawberry {
 	/** いちごのサイズ */
 	public String size;
 
-	List<String> varieties = new ArrayList<String>() {
+	static List<String> varieties = new ArrayList<String>() {
 		{
 			add("あまおう");
 			add("とちおとめ");
@@ -24,7 +24,9 @@ public class Strawberry {
 	 * @param size いちごのサイズ
 	 */
 	public Strawberry(String variety, String size) {
-		if ("いちご".equals(variety)) throw new IllegalArgumentException("想定外の品種が指定されました: " + variety);
+		// 想定外の品種の場合はオブジェクトを生成しない
+		if (!varieties.contains(variety))
+			throw new IllegalArgumentException("想定外の品種が指定されました: " + variety);
 		this.variety = variety;
 		this.size = size;
 	}
