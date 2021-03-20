@@ -1,5 +1,6 @@
 package tddbc;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,6 +42,11 @@ public class Strawberry {
 			throw new IllegalArgumentException("想定外のサイズが指定されました: " + size);
 		this.variety = variety;
 		this.size = size;
+	}
+
+	public Strawberry(String variety, BigDecimal bigDecimal) {
+		this.variety = variety;
+		this.size = "S";
 	}
 
 	public String getVarietyAndSize() {
