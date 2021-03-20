@@ -45,6 +45,9 @@ public class Strawberry {
 	}
 
 	public Strawberry(String variety, BigDecimal bigDecimal) {
+		// 想定外の品種の場合はオブジェクトを生成しない
+		if (!varieties.contains(variety))
+			throw new IllegalArgumentException("想定外の品種が指定されました: " + variety);
 		this.variety = variety;
 		this.size = "S";
 	}
