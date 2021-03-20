@@ -2,6 +2,8 @@ package tddbc;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.math.BigDecimal;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -52,6 +54,17 @@ public class StrawberryTest {
     public void いちごを生成する際にサイズに想定外_XL_の値を受け取ると例外を発生させること() throws Exception {
         Exception e = assertThrows(IllegalArgumentException.class, () -> new Strawberry("あまおう", "XL"));
         assertEquals("想定外のサイズが指定されました: XL", e.getMessage());
+    }
+
+    @Test
+    @DisplayName("いちご（品種：あまおうと重さ： 1.0g）からサイズ(S)のいちごが取得できること")
+    public void いちご_品種_あまおうと重さ_1_0_からサイズ_S_が取得できること() throws Exception {
+        // Setup
+        Strawberry sut = new Strawberry("あまおう", new BigDecimal("1.0"));
+        // Exercise
+        String actual = sut.getSize();
+        // Verify
+        assertEquals("S", actual);
     }
 
 }
