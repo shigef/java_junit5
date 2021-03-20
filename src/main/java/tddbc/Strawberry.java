@@ -44,12 +44,13 @@ public class Strawberry {
 		this.size = size;
 	}
 
-	public Strawberry(String variety, BigDecimal bigDecimal) {
+	public Strawberry(String variety, BigDecimal weightInGram) {
 		// 想定外の品種の場合はオブジェクトを生成しない
 		if (!varieties.contains(variety))
 			throw new IllegalArgumentException("想定外の品種が指定されました: " + variety);
 		this.variety = variety;
-		this.size = "S";
+		if (new BigDecimal(10).compareTo(weightInGram) > 0)
+			this.size = "S";
 	}
 
 	public String getVarietyAndSize() {
