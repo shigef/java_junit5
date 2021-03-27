@@ -6,7 +6,16 @@ import java.util.List;
 
 public class Strawberry {
 
+	public enum Varieties {
+		AMAOU("あまおう"),
+		TODHIOTOME("とちおとめ"),
+		MOUIKKO("もういっこ");
+		Varieties(String variety) {
+		}
+	}
 
+	/** いちごの品種 */
+	private Varieties varietyEnum;
 	/** いちごの品種 */
 	private String variety;
 	/** いちごのサイズ */
@@ -28,6 +37,21 @@ public class Strawberry {
 			add("LL");
 		}
 	};
+
+	/**
+	 * いちごを表すクラス.
+	 * @param variety いちごの品種
+	 * @param size いちごのサイズ
+	 */
+	public Strawberry(Varieties variety, String size) {
+		// 想定外の品種の場合はオブジェクトを生成しない
+//		if (!varieties.contains(variety))
+//			throw new IllegalArgumentException("想定外の品種が指定されました: " + variety);
+		if (!sizes.contains(size))
+			throw new IllegalArgumentException("想定外のサイズが指定されました: " + size);
+		this.varietyEnum = variety;
+		this.size = size;
+	}
 
 	/**
 	 * いちごを表すクラス.
