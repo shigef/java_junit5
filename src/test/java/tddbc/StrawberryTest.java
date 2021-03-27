@@ -61,7 +61,7 @@ public class StrawberryTest {
     public void いちご_品種_あまおうと重さ_1_0_からサイズ_S_が取得できること() throws Exception {
         // Setup
         Strawberry sut = new Strawberry("あまおう", new BigDecimal("1.0"));
-        // Verify
+        // Exercise & Verify
         assertEquals("S", sut.getSize());
     }
 
@@ -70,7 +70,7 @@ public class StrawberryTest {
     public void いちご_品種_あまおうと重さ_10_0_からサイズ_M_が取得できること() throws Exception {
         // Setup
         Strawberry sut = new Strawberry("あまおう", new BigDecimal("10.0"));
-        // Verify
+        // Exercise & Verify
         assertEquals("M", sut.getSize());
     }
 
@@ -79,7 +79,7 @@ public class StrawberryTest {
     public void いちご_品種_あまおうと重さ_20_0_からサイズ_L_が取得できること() throws Exception {
         // Setup
         Strawberry sut = new Strawberry("あまおう", new BigDecimal("20.0"));
-        // Verify
+        // Exercise & Verify
         assertEquals("L", sut.getSize());
     }
 
@@ -88,7 +88,7 @@ public class StrawberryTest {
     public void いちご_品種_あまおうと重さ_25_0_からサイズ_LL_が取得できること() throws Exception {
         // Setup
         Strawberry sut = new Strawberry("あまおう", new BigDecimal("25.0"));
-        // Verify
+        // Exercise & Verify
         assertEquals("LL", sut.getSize());
     }
 }
