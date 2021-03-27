@@ -61,10 +61,8 @@ public class StrawberryTest {
     public void いちご_品種_あまおうと重さ_1_0_からサイズ_S_が取得できること() throws Exception {
         // Setup
         Strawberry sut = new Strawberry("あまおう", new BigDecimal("1.0"));
-        // Exercise
-        String actual = sut.getSize();
         // Verify
-        assertEquals("S", actual);
+        assertEquals("S", sut.getSize());
     }
 
 }
