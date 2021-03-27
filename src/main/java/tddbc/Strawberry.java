@@ -51,6 +51,8 @@ public class Strawberry {
 		this.variety = variety;
 		if (new BigDecimal(10).compareTo(weightInGram) > 0)
 			this.size = "S";
+		else if (new BigDecimal(20).compareTo(weightInGram) > 0)
+			this.size = "M";
 	}
 
 	public String getVarietyAndSize() {
