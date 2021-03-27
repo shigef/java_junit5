@@ -36,7 +36,8 @@
 - [ ] 重さをいちごに保持するかどうか？
 - [ ] テストケースのメソッド名と@DisplayNameが値が重複しているので記載として工夫したい。
 
-- [ ] varieties, sizes を enumにする。
+- [ ] Strawberry.varieties を enumにする。
+- [ ] Strawberry.sizes を enumにする。
 - [ ] Strawberry生成時に与えるパラメータを enumにする。
 
 サイズではなく、重さを直接与えて、いちごを作成できるようにしましょう。
