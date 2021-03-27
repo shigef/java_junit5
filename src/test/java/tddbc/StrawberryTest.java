@@ -56,15 +56,19 @@ public class StrawberryTest {
 		}
 	}
 
-	@Test
-	@DisplayName("いちご（品種：あまおうとサイズ：S）文字列表現_\"あまおう: S\"を取得できること")
-	public void いちご_品種_あまおうとサイズ_S_から文字列表現_あまおう_S_を取得できること() throws Exception {
-		// Setup
-		Strawberry sut = new Strawberry("あまおう", "S");
-		// Exercise
-		String actual = sut.getVarietyAndSize();
-		// Verify
-		assertEquals("あまおう: S", actual);
+	@Nested
+	@DisplayName("いちごの文字列表現を取得できること")
+	public class いちごの文字列表現を取得できること {
+		@Test
+		@DisplayName("いちご（品種：あまおうとサイズ：S）文字列表現_\"あまおう: S\"を取得できること")
+		public void いちご_品種_あまおうとサイズ_S_から文字列表現_あまおう_S_を取得できること() throws Exception {
+			// Setup
+			Strawberry sut = new Strawberry("あまおう", "S");
+			// Exercise
+			String actual = sut.getVarietyAndSize();
+			// Verify
+			assertEquals("あまおう: S", actual);
+		}
 	}
 
 	@Nested
