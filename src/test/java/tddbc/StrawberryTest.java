@@ -11,8 +11,8 @@ import org.junit.jupiter.api.Test;
 public class StrawberryTest {
 
 	@Nested
-	@DisplayName("品種とサイズを指定したいちごのが取得できること")
-	public class 品種とサイズを指定したいちごのが取得できること {
+	@DisplayName("品種とサイズを指定したいちごが取得できること")
+	public class 品種とサイズを指定したいちごが取得できること {
 
 		@Test
 		@DisplayName("いちご（品種：あまおうとサイズ：S）からサイズ（S）が取得できること")
