@@ -37,6 +37,9 @@
 - [ ] テストケースのメソッド名と@DisplayNameが値が重複しているので記載として工夫したい。
 
 - [ ] Strawberry.varieties を enumにする。
+  - [X] Strawberryクラスに品種のEnumを追加する
+  - [X] Strawberryクラスで品種のEnumを受け取るコンストラクタを追加する。
+  - [ ] StrawberryクラスのStringのvarietyを消す
 - [ ] Strawberry.sizes を enumにする。
 - [ ] Strawberry生成時に与えるパラメータを enumにする。
 
