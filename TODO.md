@@ -39,9 +39,20 @@
 - [ ] Strawberry.varieties を enumにする。
   - [X] Strawberryクラスに品種のEnumを追加する
   - [X] Strawberryクラスで品種のEnumを受け取るコンストラクタを追加する。
+    - [X] 品種、サイズ指定のStrawberryクラスのコンストラクタを作成する
+    - [ ] 品種、重さ指定のStrawberryクラスのコンストラクタを作成する
+  - [ ] 品種(enum)、重さ指定のStrawberryクラスのコンストラクタを作成する
+
   - [ ] StrawberryクラスのStringのvarietyを消す
+    - [ ] 品種(string)、サイズ指定のStrawberryクラスのコンストラクタを削除する
+    - [ ] 品種(string)、重さ指定のStrawberryクラスのコンストラクタを削除する
+
 - [ ] Strawberry.sizes を enumにする。
 - [ ] Strawberry生成時に与えるパラメータを enumにする。
+
+- 次回
+- TODOの精査する（red-greenの流れに沿い、リファクタリンクを行う→修正の順序を明確にする）
+
 
 サイズではなく、重さを直接与えて、いちごを作成できるようにしましょう。
 ただし、いちごの重さは 1g以上とし 0g以下は対象としなくてよいものとします。
