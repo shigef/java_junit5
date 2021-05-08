@@ -2,6 +2,7 @@ package tddbc;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.EnumSet;
 import java.util.List;
 
 public class Strawberry {
@@ -61,7 +62,8 @@ public class Strawberry {
 	 */
 	public Strawberry(String variety, String size) {
 		// 想定外の品種の場合はオブジェクトを生成しない
-		if (!varieties.contains(variety))
+		if (!EnumSet.allOf(Varieties.class).stream()
+				.anyMatch(element -> element.name.equals(variety)))
 			throw new IllegalArgumentException("想定外の品種が指定されました: " + variety);
 		if (!sizes.contains(size))
 			throw new IllegalArgumentException("想定外のサイズが指定されました: " + size);
