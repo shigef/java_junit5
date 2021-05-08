@@ -48,8 +48,6 @@ public class Strawberry {
 	 */
 	public Strawberry(Varieties variety, String size) {
 		// 想定外の品種の場合はオブジェクトを生成しない
-//		if (!varieties.contains(variety))
-//			throw new IllegalArgumentException("想定外の品種が指定されました: " + variety);
 		if (!sizes.contains(size))
 			throw new IllegalArgumentException("想定外のサイズが指定されました: " + size);
 		this.varietyEnum = variety;
