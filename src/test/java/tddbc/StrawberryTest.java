@@ -109,6 +109,15 @@ public class StrawberryTest {
 			// Exercise & Verify
 			assertEquals("LL", sut.getSize());
 		}
+
+		@Test
+		@DisplayName("いちご（品種enum：あまおうと重さ： 1.0g）からサイズ(S)のいちごが取得できること")
+		public void いちご_品種enum_あまおうと重さ_1_0_からサイズ_S_が取得できること() throws Exception {
+			// Setup
+			Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("1.0"));
+			// Exercise & Verify
+			assertEquals("S", sut.getSize());
+		}
 	}
 
 }
