@@ -39,9 +39,8 @@
 - [ ] Strawberry.varieties を enumにする。
   - [X] Strawberryクラスに品種のEnumを追加する
   - [X] Strawberryクラスで品種のEnumを受け取るコンストラクタを追加する。
-    - [X] 品種、サイズ指定のStrawberryクラスのコンストラクタを作成する
-    - [ ] 品種、重さ指定のStrawberryクラスのコンストラクタを作成する
-  - [ ] 品種(enum)、重さ指定のStrawberryクラスのコンストラクタを作成する
+    - [X] 品種(enum)、サイズ指定のStrawberryクラスのコンストラクタを作成する
+    - [ ] 品種(enum)、重さ指定のStrawberryクラスのコンストラクタを作成する
 
   - [ ] StrawberryクラスのStringのvarietyを消す
     - [ ] 品種(string)、サイズ指定のStrawberryクラスのコンストラクタを削除する

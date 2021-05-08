@@ -87,7 +87,7 @@ public class Strawberry {
 	}
 
 	public String getVarietyAndSize() {
-		return variety + ": " + size;
+		return varietyEnum.name + ": " + size;
 	}
 
 	public String getVariety() {
