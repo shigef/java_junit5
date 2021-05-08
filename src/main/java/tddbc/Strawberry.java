@@ -99,6 +99,18 @@ public class Strawberry {
 			this.size = "LL";
 	}
 
+	public Strawberry(Varieties variety, BigDecimal weightInGram) {
+		this.variety = variety.name;
+		if (new BigDecimal(10).compareTo(weightInGram) > 0)
+			this.size = "S";
+		else if (new BigDecimal(20).compareTo(weightInGram) > 0)
+			this.size = "M";
+		else if (new BigDecimal(25).compareTo(weightInGram) > 0)
+			this.size = "L";
+		else
+			this.size = "LL";
+	}
+
 	/**
 	 * イチゴの文字列表現(品種: サイズ)を取得します.
 	 * @return イチゴの文字列表現
