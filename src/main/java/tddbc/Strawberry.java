@@ -10,7 +10,10 @@ public class Strawberry {
 		AMAOU("あまおう"),
 		TODHIOTOME("とちおとめ"),
 		MOUIKKO("もういっこ");
+
+		String variety;
 		Varieties(String variety) {
+			this.variety = variety;
 		}
 	}
 
@@ -88,7 +91,7 @@ public class Strawberry {
 	}
 
 	public String getVariety() {
-		return varietyEnum.name();
+		return varietyEnum.variety;
 	}
 
 	public String getSize() {
