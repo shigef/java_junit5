@@ -25,14 +25,6 @@ public class Strawberry {
 	/** いちごのサイズ */
 	private String size;
 
-	static List<String> varieties = new ArrayList<String>() {
-		{
-			add("あまおう");
-			add("とちおとめ");
-			add("もういっこ");
-		}
-	};
-
 	static List<String> sizes = new ArrayList<String>() {
 		{
 			add("S");
