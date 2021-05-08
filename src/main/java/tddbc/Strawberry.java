@@ -99,6 +99,11 @@ public class Strawberry {
 			this.size = "LL";
 	}
 
+	/**
+	 * いちごを表すクラスを品種と重さを指定して生成する.
+	 * @param variety いちごの品種の列挙型
+	 * @param weightInGram いちごの重さ
+	 */
 	public Strawberry(Varieties variety, BigDecimal weightInGram) {
 		this.variety = variety.name;
 		if (new BigDecimal(10).compareTo(weightInGram) > 0)
