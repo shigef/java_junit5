@@ -5,13 +5,12 @@ import java.util.EnumSet;
 
 public class Strawberry {
 
-	/** 品種を表す列挙体. */
+	/** 品種を表す列挙型. */
 	public enum Varieties {
-		AMAOU("あまおう"),
-		TODHIOTOME("とちおとめ"),
-		MOUIKKO("もういっこ");
+		AMAOU("あまおう"), TODHIOTOME("とちおとめ"), MOUIKKO("もういっこ");
 
 		String name;
+
 		Varieties(String variety) {
 			this.name = variety;
 		}
@@ -27,13 +26,12 @@ public class Strawberry {
 		}
 	}
 
-	/** サイズを表す列挙体. */
+	/** サイズを表す列挙型. */
 	public enum Sizes {
-		S("S"),
-		M("M"),
-		L("L"),
-		LL("LL");
+		S("S"), M("M"), L("L"), LL("LL");
+
 		String name;
+
 		Sizes(String name) {
 			this.name = name;
 		}
@@ -57,7 +55,6 @@ public class Strawberry {
 	private String variety;
 	/** いちごのサイズ */
 	private String size;
-
 
 	/**
 	 * いちごを表すクラス.
