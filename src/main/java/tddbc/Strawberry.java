@@ -84,14 +84,26 @@ public class Strawberry {
 			this.size = "LL";
 	}
 
+	/**
+	 * イチゴの文字列表現(品種: サイズ)を取得します.
+	 * @return イチゴの文字列表現
+	 */
 	public String getVarietyAndSize() {
 		return varietyEnum.name + ": " + size;
 	}
 
+	/**
+	 * 品種を取得します.
+	 * @return 品種
+	 */
 	public String getVariety() {
 		return varietyEnum.name;
 	}
 
+	/**
+	 * サイズを取得します.
+	 * @return サイズ
+	 */
 	public String getSize() {
 		return size;
 	}
