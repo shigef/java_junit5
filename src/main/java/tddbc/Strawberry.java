@@ -73,7 +73,8 @@ public class Strawberry {
 
 	public Strawberry(String variety, BigDecimal weightInGram) {
 		// 想定外の品種の場合はオブジェクトを生成しない
-		if (!varieties.contains(variety))
+		if (!EnumSet.allOf(Varieties.class).stream()
+				.anyMatch(element -> element.name.equals(variety)))
 			throw new IllegalArgumentException("想定外の品種が指定されました: " + variety);
 		this.variety = variety;
 		if (new BigDecimal(10).compareTo(weightInGram) > 0)
