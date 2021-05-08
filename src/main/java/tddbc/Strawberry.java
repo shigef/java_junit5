@@ -33,9 +33,19 @@ public class Strawberry {
 		M("M"),
 		L("L"),
 		LL("LL");
-		String size;
-		Sizes(String size) {
-			this.size = size;
+		String name;
+		Sizes(String name) {
+			this.name = name;
+		}
+
+		/**
+		 * 引数の文字列がSizesに含まれるか検査します.
+		 * @param size サイズ
+		 * @return 含まれる場合trueを返却.
+		 */
+		static boolean validateName(String size) {
+			return EnumSet.allOf(Sizes.class).stream()
+					.anyMatch(element -> element.name.equals(size));
 		}
 	}
 
@@ -79,7 +89,7 @@ public class Strawberry {
 		// 想定外の品種の場合はオブジェクトを生成しない
 		if (!Varieties.validateName(variety))
 			throw new IllegalArgumentException("想定外の品種が指定されました: " + variety);
-		if (!sizes.contains(size))
+		if (!Sizes.validateName(size))
 			throw new IllegalArgumentException("想定外のサイズが指定されました: " + size);
 		this.variety = variety;
 		this.size = size;
