@@ -1,9 +1,7 @@
 package tddbc;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.EnumSet;
-import java.util.List;
 
 public class Strawberry {
 
@@ -58,14 +56,6 @@ public class Strawberry {
 	/** いちごのサイズ */
 	private String size;
 
-	static List<String> sizes = new ArrayList<String>() {
-		{
-			add("S");
-			add("M");
-			add("L");
-			add("LL");
-		}
-	};
 
 	/**
 	 * いちごを表すクラス.
@@ -74,7 +64,7 @@ public class Strawberry {
 	 */
 	public Strawberry(Varieties variety, String size) {
 		// 想定外の品種の場合はオブジェクトを生成しない
-		if (!sizes.contains(size))
+		if (!Sizes.validateName(size))
 			throw new IllegalArgumentException("想定外のサイズが指定されました: " + size);
 		this.varietyEnum = variety;
 		this.size = size;
