@@ -28,8 +28,21 @@ public class Strawberry {
 		}
 	}
 
+	public enum Sizes {
+		S("S"),
+		M("M"),
+		L("L"),
+		LL("LL");
+		String size;
+		Sizes(String size) {
+			this.size = size;
+		}
+	}
+
 	/** いちごの品種 */
 	private Varieties varietyEnum;
+	/** いちごのサイズ */
+	private Sizes sizeEnum;
 	/** いちごの品種 */
 	private String variety;
 	/** いちごのサイズ */
