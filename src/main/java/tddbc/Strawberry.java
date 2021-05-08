@@ -5,6 +5,7 @@ import java.util.EnumSet;
 
 public class Strawberry {
 
+	/** 品種を表す列挙体. */
 	public enum Varieties {
 		AMAOU("あまおう"),
 		TODHIOTOME("とちおとめ"),
@@ -26,6 +27,7 @@ public class Strawberry {
 		}
 	}
 
+	/** サイズを表す列挙体. */
 	public enum Sizes {
 		S("S"),
 		M("M"),
