@@ -16,6 +16,16 @@ public class Strawberry {
 		Varieties(String variety) {
 			this.name = variety;
 		}
+
+		/**
+		 * 引数の文字列がVarietiesに含まれるか検査します.
+		 * @param variety 品種
+		 * @return 含まれる場合trueを返却.
+		 */
+		static boolean validateName(String variety) {
+			return EnumSet.allOf(Varieties.class).stream()
+					.anyMatch(element -> element.name.equals(variety));
+		}
 	}
 
 	/** いちごの品種 */
@@ -54,8 +64,7 @@ public class Strawberry {
 	 */
 	public Strawberry(String variety, String size) {
 		// 想定外の品種の場合はオブジェクトを生成しない
-		if (!EnumSet.allOf(Varieties.class).stream()
-				.anyMatch(element -> element.name.equals(variety)))
+		if (!Varieties.validateName(variety))
 			throw new IllegalArgumentException("想定外の品種が指定されました: " + variety);
 		if (!sizes.contains(size))
 			throw new IllegalArgumentException("想定外のサイズが指定されました: " + size);
@@ -65,8 +74,7 @@ public class Strawberry {
 
 	public Strawberry(String variety, BigDecimal weightInGram) {
 		// 想定外の品種の場合はオブジェクトを生成しない
-		if (!EnumSet.allOf(Varieties.class).stream()
-				.anyMatch(element -> element.name.equals(variety)))
+		if (!Varieties.validateName(variety))
 			throw new IllegalArgumentException("想定外の品種が指定されました: " + variety);
 		this.variety = variety;
 		if (new BigDecimal(10).compareTo(weightInGram) > 0)
