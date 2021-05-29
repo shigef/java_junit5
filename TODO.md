@@ -49,7 +49,8 @@
 - [X] Strawberry.sizes を enumにする。
 - [ ] Strawberry.Sizes enum に重さを引数としてサイズを返す判定メソッドを持たせる。
 - [ ] Strawberry生成時に与えるパラメータを enumにする。
-- [X] Sizes.validateNameを削除する
+- [X] Sizes.validateNameを削除する (本当は先にやってはいけなかった・・・)
+    -[ ] 品種(enum)、サイズ(string)指定のStrawberryクラスのコンストラクタを削除する
 - [X] Varieties.validateNameを削除する
 
 - 次回
