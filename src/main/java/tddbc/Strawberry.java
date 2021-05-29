@@ -106,6 +106,7 @@ public class Strawberry {
 	 */
 	public Strawberry(Varieties variety, BigDecimal weightInGram) {
 		this.variety = variety.name;
+		this.varietyEnum = variety;
 		if (new BigDecimal(10).compareTo(weightInGram) > 0)
 			this.size = "S";
 		else if (new BigDecimal(20).compareTo(weightInGram) > 0)
@@ -130,6 +131,14 @@ public class Strawberry {
 	 */
 	public String getVariety() {
 		return varietyEnum.name;
+	}
+
+	/**
+	 * 品種を取得します.
+	 * @return 品種(enum)
+	 */
+	public Varieties getVarietyEnum() {
+		return varietyEnum;
 	}
 
 	/**
