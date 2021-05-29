@@ -69,21 +69,6 @@ public class Strawberry {
 		this.size = size;
 	}
 
-	public Strawberry(String variety, BigDecimal weightInGram) {
-		// 想定外の品種の場合はオブジェクトを生成しない
-		if (!Varieties.validateName(variety))
-			throw new IllegalArgumentException("想定外の品種が指定されました: " + variety);
-		this.variety = variety;
-		if (new BigDecimal(10).compareTo(weightInGram) > 0)
-			this.size = "S";
-		else if (new BigDecimal(20).compareTo(weightInGram) > 0)
-			this.size = "M";
-		else if (new BigDecimal(25).compareTo(weightInGram) > 0)
-			this.size = "L";
-		else
-			this.size = "LL";
-	}
-
 	/**
 	 * いちごを表すクラスを品種と重さを指定して生成する.
 	 * @param variety いちごの品種の列挙型

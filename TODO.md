@@ -44,7 +44,7 @@
 
   - [ ] StrawberryクラスのStringのvarietyを消す
     - [X] 品種(string)、サイズ指定のStrawberryクラスのコンストラクタを削除する
-    - [ ] 品種(string)、重さ指定のStrawberryクラスのコンストラクタを削除する
+    - [X] 品種(string)、重さ指定のStrawberryクラスのコンストラクタを削除する
 
 - [X] Strawberry.sizes を enumにする。
 - [ ] Strawberry.Sizes enum に重さを引数としてサイズを返す判定メソッドを持たせる。
