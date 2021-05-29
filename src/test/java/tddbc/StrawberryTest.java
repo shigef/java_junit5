@@ -72,8 +72,8 @@ public class StrawberryTest {
 	}
 
 	@Nested
-	@DisplayName("品種と重さを指定したいちごのが取得できること")
-	public class 品種と重さを指定したいちごのが取得できること {
+	@DisplayName("品種と重さを指定したいちごが取得できること")
+	public class 品種と重さを指定したいちごが取得できること {
 		@Test
 		@DisplayName("いちご（品種：あまおうと重さ： 1.0g）からサイズ(S)のいちごが取得できること")
 		public void いちご_品種_あまおうと重さ_1_0_からサイズ_S_が取得できること() throws Exception {
