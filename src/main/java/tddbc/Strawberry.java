@@ -1,7 +1,6 @@
 package tddbc;
 
 import java.math.BigDecimal;
-import java.util.EnumSet;
 
 public class Strawberry {
 
@@ -15,15 +14,6 @@ public class Strawberry {
 			this.name = variety;
 		}
 
-		/**
-		 * 引数の文字列がVarietiesに含まれるか検査します.
-		 * @param variety 品種
-		 * @return 含まれる場合trueを返却.
-		 */
-		static boolean validateName(String variety) {
-			return EnumSet.allOf(Varieties.class).stream()
-					.anyMatch(element -> element.name.equals(variety));
-		}
 	}
 
 	/** サイズを表す列挙型. */
@@ -36,15 +26,6 @@ public class Strawberry {
 			this.name = name;
 		}
 
-		/**
-		 * 引数の文字列がSizesに含まれるか検査します.
-		 * @param size サイズ
-		 * @return 含まれる場合trueを返却.
-		 */
-		static boolean validateName(String size) {
-			return EnumSet.allOf(Sizes.class).stream()
-					.anyMatch(element -> element.name.equals(size));
-		}
 	}
 
 	/** いちごの品種 */
@@ -60,9 +41,6 @@ public class Strawberry {
 	 * @param size いちごのサイズ
 	 */
 	public Strawberry(Varieties variety, String size) {
-		// 想定外の品種の場合はオブジェクトを生成しない
-		if (!Sizes.validateName(size))
-			throw new IllegalArgumentException("想定外のサイズが指定されました: " + size);
 		this.varietyEnum = variety;
 		this.size = size;
 	}

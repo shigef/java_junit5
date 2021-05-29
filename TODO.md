@@ -49,8 +49,8 @@
 - [X] Strawberry.sizes を enumにする。
 - [ ] Strawberry.Sizes enum に重さを引数としてサイズを返す判定メソッドを持たせる。
 - [ ] Strawberry生成時に与えるパラメータを enumにする。
-- [ ] Sizes.validateNameを削除する
-- [ ] Varieties.validateNameを削除する
+- [X] Sizes.validateNameを削除する
+- [X] Varieties.validateNameを削除する
 
 - 次回
 - TODOの精査する（red-greenの流れに沿い、リファクタリンクを行う→修正の順序を明確にする）
