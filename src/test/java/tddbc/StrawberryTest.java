@@ -38,25 +38,6 @@ public class StrawberryTest {
 	}
 
 	@Nested
-	@DisplayName("想定外の品種とサイズを指定した場合、例外を発生させること")
-	public class 想定外の品種とサイズを指定した場合_例外を発生させること {
-
-		@Test
-		@DisplayName("いちごを生成する際に品種に想定外(いちご)の値を受け取ると例外を発生させること")
-		public void いちごを生成する際に品種に想定外_いちご_の値を受け取ると例外を発生させること() throws Exception {
-			Exception e = assertThrows(IllegalArgumentException.class, () -> new Strawberry("いちご", "S"));
-			assertEquals("想定外の品種が指定されました: いちご", e.getMessage());
-		}
-
-		@Test
-		@DisplayName("いちごを生成する際にサイズに想定外(XL)の値を受け取ると例外を発生させること")
-		public void いちごを生成する際にサイズに想定外_XL_の値を受け取ると例外を発生させること() throws Exception {
-			Exception e = assertThrows(IllegalArgumentException.class, () -> new Strawberry("あまおう", "XL"));
-			assertEquals("想定外のサイズが指定されました: XL", e.getMessage());
-		}
-	}
-
-	@Nested
 	@DisplayName("いちごの文字列表現を取得できること")
 	public class いちごの文字列表現を取得できること {
 		@Test
