@@ -42,7 +42,7 @@
     - [X] 品種(enum)、サイズ指定のStrawberryクラスのコンストラクタを作成する
     - [X] 品種(enum)、重さ指定のStrawberryクラスのコンストラクタを作成する
 
-  - [ ] StrawberryクラスのStringのvarietyを消す
+  - [X] StrawberryクラスのStringのvarietyを消す
     - [X] 品種(string)、サイズ指定のStrawberryクラスのコンストラクタを削除する
     - [X] 品種(string)、重さ指定のStrawberryクラスのコンストラクタを削除する
 

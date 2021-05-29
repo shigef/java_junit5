@@ -51,8 +51,6 @@ public class Strawberry {
 	private Varieties varietyEnum;
 	/** いちごのサイズ */
 	private Sizes sizeEnum;
-	/** いちごの品種 */
-	private String variety;
 	/** いちごのサイズ */
 	private String size;
 
@@ -75,7 +73,6 @@ public class Strawberry {
 	 * @param weightInGram いちごの重さ
 	 */
 	public Strawberry(Varieties variety, BigDecimal weightInGram) {
-		this.variety = variety.name;
 		this.varietyEnum = variety;
 		if (new BigDecimal(10).compareTo(weightInGram) > 0)
 			this.size = "S";
