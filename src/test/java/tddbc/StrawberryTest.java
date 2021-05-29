@@ -119,7 +119,7 @@ public class StrawberryTest {
 		@DisplayName("いちごから品種が取得できる")
 		public class いちごから品種が取得できる {
 			@Test
-			@DisplayName("いちご（品種：あまおうと重さ： 1.0g）から品種のいちごが取得できること")
+			@DisplayName("いちご（品種：あまおうと重さ： 1.0g）から品種(あまおう)のいちごが取得できること")
 			public void いちご_品種_あまおうと重さ_1_0_から品種_あまおう_が取得できること() throws Exception {
 				// Setup
 				Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("1.0"));
