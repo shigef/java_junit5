@@ -74,51 +74,60 @@ public class StrawberryTest {
 	@Nested
 	@DisplayName("品種と重さを指定したいちごが取得できること")
 	public class 品種と重さを指定したいちごが取得できること {
-		@Test
-		@DisplayName("いちご（品種：あまおうと重さ： 1.0g）からサイズ(S)のいちごが取得できること")
-		public void いちご_品種_あまおうと重さ_1_0_からサイズ_S_が取得できること() throws Exception {
-			// Setup
-			Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("1.0"));
-			// Exercise & Verify
-			assertEquals("S", sut.getSize());
+
+		@Nested
+		@DisplayName("いちごからサイズが取得できる")
+		public class いちごからサイズが取得できる {
+			@Test
+			@DisplayName("いちご（品種：あまおうと重さ： 1.0g）からサイズ(S)のいちごが取得できること")
+			public void いちご_品種_あまおうと重さ_1_0_からサイズ_S_が取得できること() throws Exception {
+				// Setup
+				Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("1.0"));
+				// Exercise & Verify
+				assertEquals("S", sut.getSize());
+			}
+
+			@Test
+			@DisplayName("いちご（品種：あまおうと重さ：10.0g）からサイズ(M)のいちごが取得できること")
+			public void いちご_品種_あまおうと重さ_10_0_からサイズ_M_が取得できること() throws Exception {
+				// Setup
+				Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("10.0"));
+				// Exercise & Verify
+				assertEquals("M", sut.getSize());
+			}
+
+			@Test
+			@DisplayName("いちご（品種：あまおうと重さ：20.0g）からサイズ(L)のいちごが取得できること")
+			public void いちご_品種_あまおうと重さ_20_0_からサイズ_L_が取得できること() throws Exception {
+				// Setup
+				Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("20.0"));
+				// Exercise & Verify
+				assertEquals("L", sut.getSize());
+			}
+
+			@Test
+			@DisplayName("いちご（品種：あまおうと重さ：25.0g）からサイズ(LL)のいちごが取得できること")
+			public void いちご_品種_あまおうと重さ_25_0_からサイズ_LL_が取得できること() throws Exception {
+				// Setup
+				Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("25.0"));
+				// Exercise & Verify
+				assertEquals("LL", sut.getSize());
+			}
 		}
 
-		@Test
-		@DisplayName("いちご（品種：あまおうと重さ：10.0g）からサイズ(M)のいちごが取得できること")
-		public void いちご_品種_あまおうと重さ_10_0_からサイズ_M_が取得できること() throws Exception {
-			// Setup
-			Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("10.0"));
-			// Exercise & Verify
-			assertEquals("M", sut.getSize());
+		@Nested
+		@DisplayName("いちごから品種が取得できる")
+		public class いちごから品種が取得できる {
+			@Test
+			@DisplayName("いちご（品種：あまおうと重さ： 1.0g）から品種のいちごが取得できること")
+			public void いちご_品種_あまおうと重さ_1_0_から品種_あまおう_が取得できること() throws Exception {
+				// Setup
+				Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("1.0"));
+				// Exercise & Verify
+				assertEquals(Strawberry.Varieties.AMAOU, sut.getVarietyEnum());
+			}
 		}
-
-		@Test
-		@DisplayName("いちご（品種：あまおうと重さ：20.0g）からサイズ(L)のいちごが取得できること")
-		public void いちご_品種_あまおうと重さ_20_0_からサイズ_L_が取得できること() throws Exception {
-			// Setup
-			Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("20.0"));
-			// Exercise & Verify
-			assertEquals("L", sut.getSize());
-		}
-
-		@Test
-		@DisplayName("いちご（品種：あまおうと重さ：25.0g）からサイズ(LL)のいちごが取得できること")
-		public void いちご_品種_あまおうと重さ_25_0_からサイズ_LL_が取得できること() throws Exception {
-			// Setup
-			Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("25.0"));
-			// Exercise & Verify
-			assertEquals("LL", sut.getSize());
-		}
-
 	}
 
-	@Test
-	@DisplayName("いちご（品種：あまおうと重さ： 1.0g）から品種のいちごが取得できること")
-	public void いちご_品種_あまおうと重さ_1_0_から品種_あまおう_が取得できること() throws Exception {
-		// Setup
-		Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("1.0"));
-		// Exercise & Verify
-		assertEquals(Strawberry.Varieties.AMAOU, sut.getVarietyEnum());
-	}
 
 }
