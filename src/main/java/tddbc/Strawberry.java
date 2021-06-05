@@ -45,10 +45,15 @@ public class Strawberry {
 		this.size = size;
 	}
 
-//	public Strawberry(Varieties variety, Sizes size) {
-//		this.varietyEnum = variety;
-//		this.sizeEnum = size;
-//	}
+	/**
+	 * いちごを表すクラス.
+	 * @param variety いちごの品種
+	 * @param size いちごのサイズ
+	 */
+	public Strawberry(Varieties variety, Sizes size) {
+		this.varietyEnum = variety;
+		this.sizeEnum = size;
+	}
 
 	/**
 	 * いちごを表すクラスを品種と重さを指定して生成する.
@@ -99,7 +104,11 @@ public class Strawberry {
 		return size;
 	}
 
-//	public Sizes getSizeEnum() {
-//		return sizeEnum;
-//	}
+	/**
+	 * サイズを取得します.
+	 * @return サイズ
+	 */
+	public Sizes getSizeEnum() {
+		return sizeEnum;
+	}
 }
