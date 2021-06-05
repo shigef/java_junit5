@@ -34,6 +34,9 @@
 
 - [ ] サイズ指定のコンストラクタを残すかどうか？
   - [ ] サイズ指定のコンストラクタをStringからSizesに変更する
+  - [X] 品種enumと重さBigDecimalのコンストラクタでサイズenumを代入するようにリファクタリング
+  - [ ] tddbc.Strawberry.Strawberry(Varieties, String)のsizeEnum代入の仮実装をリファクタする
+  - [ ] 品種enumとサイズStringのコンストラクタのテストコードを削除する
 - [ ] 重さをいちごに保持するかどうか？
 - [ ] テストケースのメソッド名と@DisplayNameが値が重複しているので記載として工夫したい。
 

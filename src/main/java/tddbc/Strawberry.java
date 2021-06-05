@@ -43,6 +43,7 @@ public class Strawberry {
 	public Strawberry(Varieties variety, String size) {
 		this.varietyEnum = variety;
 		this.size = size;
+		this.sizeEnum = Sizes.S;
 	}
 
 	/**
@@ -62,14 +63,15 @@ public class Strawberry {
 	 */
 	public Strawberry(Varieties variety, BigDecimal weightInGram) {
 		this.varietyEnum = variety;
-		if (new BigDecimal(10).compareTo(weightInGram) > 0)
-			this.size = "S";
-		else if (new BigDecimal(20).compareTo(weightInGram) > 0)
-			this.size = "M";
-		else if (new BigDecimal(25).compareTo(weightInGram) > 0)
-			this.size = "L";
-		else
-			this.size = "LL";
+		if (new BigDecimal(10).compareTo(weightInGram) > 0) {
+			this.sizeEnum = Sizes.S;
+		} else if (new BigDecimal(20).compareTo(weightInGram) > 0) {
+			this.sizeEnum = Sizes.M;
+		} else if (new BigDecimal(25).compareTo(weightInGram) > 0) {
+			this.sizeEnum = Sizes.L;
+		} else {
+			this.sizeEnum = Sizes.LL;
+		}
 	}
 
 	/**
@@ -101,7 +103,7 @@ public class Strawberry {
 	 * @return サイズ
 	 */
 	public String getSize() {
-		return size;
+		return sizeEnum.name;
 	}
 
 	/**
