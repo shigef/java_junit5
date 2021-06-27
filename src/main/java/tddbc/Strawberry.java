@@ -89,14 +89,6 @@ public class Strawberry {
 	 * サイズを取得します.
 	 * @return サイズ
 	 */
-	public String getSize() {
-		return sizeEnum.name;
-	}
-
-	/**
-	 * サイズを取得します.
-	 * @return サイズ
-	 */
 	public Sizes getSizeEnum() {
 		return sizeEnum;
 	}

@@ -24,17 +24,6 @@ public class StrawberryTest {
 		}
 
 		@Test
-		@DisplayName("いちご（品種：あまおうとサイズenum：S）からサイズ（S）が取得できること")
-		public void いちご_品種_あまおうとサイズ_S_からサイズ_S_が取得できることenum() throws Exception {
-			// Setup
-			Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, Strawberry.Sizes.S);
-			// Exercise
-			String actual = sut.getSize();
-			// Verify
-			assertEquals("S", actual);
-		}
-
-		@Test
 		@DisplayName("いちご（品種：あまおうとサイズenum：S）から品種（あまおう）が取得できること")
 		public void いちご_品種_あまおうとサイズ_S_から品種_あまおう_が取得できることenum() throws Exception {
 			// Setup
