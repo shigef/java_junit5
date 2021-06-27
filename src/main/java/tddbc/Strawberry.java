@@ -32,19 +32,6 @@ public class Strawberry {
 	private Varieties varietyEnum;
 	/** いちごのサイズ */
 	private Sizes sizeEnum;
-	/** いちごのサイズ */
-	private String size;
-
-	/**
-	 * いちごを表すクラス.
-	 * @param variety いちごの品種
-	 * @param size いちごのサイズ
-	 */
-	public Strawberry(Varieties variety, String size) {
-		this.varietyEnum = variety;
-		this.size = size;
-		this.sizeEnum = Sizes.S;
-	}
 
 	/**
 	 * いちごを表すクラス.
