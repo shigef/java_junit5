@@ -20,7 +20,7 @@ public class StrawberryTest {
 			// Setup
 			Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, Strawberry.Sizes.S);
 			// Excercise & Verify
-			assertEquals(Strawberry.Sizes.S, sut.getSizeEnum());
+			assertEquals(Strawberry.Sizes.S, sut.getSize());
 		}
 
 		@Test
@@ -63,7 +63,7 @@ public class StrawberryTest {
 				// Setup
 				Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("1.0"));
 				// Exercise & Verify
-				assertEquals(Strawberry.Sizes.S, sut.getSizeEnum());
+				assertEquals(Strawberry.Sizes.S, sut.getSize());
 			}
 
 			@Test
@@ -72,7 +72,7 @@ public class StrawberryTest {
 				// Setup
 				Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("10.0"));
 				// Exercise & Verify
-				assertEquals(Strawberry.Sizes.M, sut.getSizeEnum());
+				assertEquals(Strawberry.Sizes.M, sut.getSize());
 			}
 
 			@Test
@@ -81,7 +81,7 @@ public class StrawberryTest {
 				// Setup
 				Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("20.0"));
 				// Exercise & Verify
-				assertEquals(Strawberry.Sizes.L, sut.getSizeEnum());
+				assertEquals(Strawberry.Sizes.L, sut.getSize());
 			}
 
 			@Test
@@ -90,7 +90,7 @@ public class StrawberryTest {
 				// Setup
 				Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("25.0"));
 				// Exercise & Verify
-				assertEquals(Strawberry.Sizes.LL, sut.getSizeEnum());
+				assertEquals(Strawberry.Sizes.LL, sut.getSize());
 			}
 		}
 
