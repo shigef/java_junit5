@@ -56,7 +56,9 @@
     -[X] 品種(enum)、サイズ(string)指定のStrawberryクラスのコンストラクタを削除する
 - [X] Varieties.validateNameを削除する
 
-
+- [X] Strawberryクラスの品種を取得するメソッドをEnumに統一する
+  - [X] String getVariety() を削除
+  - [X] Varieties getVarietyEnum() のメソッド名を getVariety()に変更
 
 サイズではなく、重さを直接与えて、いちごを作成できるようにしましょう。
 ただし、いちごの重さは 1g以上とし 0g以下は対象としなくてよいものとします。

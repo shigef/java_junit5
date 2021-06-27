@@ -28,10 +28,8 @@ public class StrawberryTest {
 		public void いちご_品種_あまおうとサイズ_S_から品種_あまおう_が取得できることenum() throws Exception {
 			// Setup
 			Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, Strawberry.Sizes.S);
-			// Exercise
-			String actual = sut.getVariety();
-			// Verify
-			assertEquals("あまおう", actual);
+			// Exercise & Verify
+			assertEquals(Strawberry.Varieties.AMAOU, sut.getVariety());
 		}
 	}
 
@@ -103,7 +101,7 @@ public class StrawberryTest {
 				// Setup
 				Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("1.0"));
 				// Exercise & Verify
-				assertEquals(Strawberry.Varieties.AMAOU, sut.getVarietyEnum());
+				assertEquals(Strawberry.Varieties.AMAOU, sut.getVariety());
 			}
 		}
 	}
