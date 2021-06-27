@@ -32,33 +32,30 @@
   - [ ] いちご（品種：あまおうと重さ：24.9g）文字列表現_"あまおう: L"を取得できること
   - [ ] いちご（品種：あまおうと重さ：25.0g）文字列表現_"あまおう: LL"を取得できること
 
-- [ ] サイズ指定のコンストラクタを残すかどうか？
-  - [ ] サイズ指定のコンストラクタをStringからSizesに変更する
+- [X] サイズ指定のコンストラクタを残すかどうか？ -> サイズenum指定のコンストラクタは残してサイズStirngのコンストラクタは消す。
+  - [X] サイズ指定のコンストラクタをStringからSizesに変更する
   - [X] 品種enumと重さBigDecimalのコンストラクタでサイズenumを代入するようにリファクタリング
-  - [ ] tddbc.Strawberry.Strawberry(Varieties, String)のsizeEnum代入の仮実装をリファクタする
-  - [ ] 品種enumとサイズStringのコンストラクタのテストコードを削除する
+  - [X] tddbc.Strawberry.Strawberry(Varieties, String)のsizeEnum代入の仮実装をリファクタする
+  - [X] 品種enumとサイズStringのコンストラクタのテストコードを削除する
 - [ ] 重さをいちごに保持するかどうか？
 - [ ] テストケースのメソッド名と@DisplayNameが値が重複しているので記載として工夫したい。
 
-- [ ] Strawberry.varieties を enumにする。
+- [X] Strawberry.varieties を enumにする。
   - [X] Strawberryクラスに品種のEnumを追加する
   - [X] Strawberryクラスで品種のEnumを受け取るコンストラクタを追加する。
     - [X] 品種(enum)、サイズ指定のStrawberryクラスのコンストラクタを作成する
     - [X] 品種(enum)、重さ指定のStrawberryクラスのコンストラクタを作成する
-
   - [X] StrawberryクラスのStringのvarietyを消す
     - [X] 品種(string)、サイズ指定のStrawberryクラスのコンストラクタを削除する
     - [X] 品種(string)、重さ指定のStrawberryクラスのコンストラクタを削除する
 
 - [X] Strawberry.sizes を enumにする。
 - [ ] Strawberry.Sizes enum に重さを引数としてサイズを返す判定メソッドを持たせる。
-- [ ] Strawberry生成時に与えるパラメータを enumにする。
+- [X] Strawberry生成時に与えるパラメータを enumにする。
 - [X] Sizes.validateNameを削除する (本当は先にやってはいけなかった・・・)
-    -[ ] 品種(enum)、サイズ(string)指定のStrawberryクラスのコンストラクタを削除する
+    -[X] 品種(enum)、サイズ(string)指定のStrawberryクラスのコンストラクタを削除する
 - [X] Varieties.validateNameを削除する
 
-- 次回
-- TODOの精査する（red-greenの流れに沿い、リファクタリンクを行う→修正の順序を明確にする）
 
 
 サイズではなく、重さを直接与えて、いちごを作成できるようにしましょう。
