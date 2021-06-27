@@ -80,6 +80,16 @@ public class StrawberryTest {
 			// Verify
 			assertEquals("あまおう: S", actual);
 		}
+		@Test
+		@DisplayName("いちご（品種：あまおうとサイズenum：S）文字列表現_\"あまおう: S\"を取得できること")
+		public void いちご_品種_あまおうとサイズ_S_から文字列表現_あまおう_S_を取得できることenum() throws Exception {
+			// Setup
+			Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, Strawberry.Sizes.S);
+			// Exercise
+			String actual = sut.getVarietyAndSize();
+			// Verify
+			assertEquals("あまおう: S", actual);
+		}
 	}
 
 	@Nested
