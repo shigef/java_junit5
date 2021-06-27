@@ -79,7 +79,7 @@ public class Strawberry {
 	 * @return イチゴの文字列表現
 	 */
 	public String getVarietyAndSize() {
-		return varietyEnum.name + ": " + size;
+		return varietyEnum.name + ": " + sizeEnum.name;
 	}
 
 	/**
