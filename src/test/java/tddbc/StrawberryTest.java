@@ -67,14 +67,14 @@ public class StrawberryTest {
 
 		@Nested
 		@DisplayName("いちごからサイズが取得できること")
-		public class いちごからサイズが取得できる {
+		public class いちごからサイズが取得できるenum {
 			@Test
 			@DisplayName("いちご（品種：あまおうと重さ： 1.0g）からサイズ(S)のいちごが取得できること")
 			public void いちご_品種_あまおうと重さ_1_0_からサイズ_S_が取得できること() throws Exception {
 				// Setup
 				Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("1.0"));
 				// Exercise & Verify
-				assertEquals("S", sut.getSize());
+				assertEquals(Strawberry.Sizes.S, sut.getSizeEnum());
 			}
 
 			@Test
@@ -83,7 +83,7 @@ public class StrawberryTest {
 				// Setup
 				Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("10.0"));
 				// Exercise & Verify
-				assertEquals("M", sut.getSize());
+				assertEquals(Strawberry.Sizes.M, sut.getSizeEnum());
 			}
 
 			@Test
@@ -92,7 +92,7 @@ public class StrawberryTest {
 				// Setup
 				Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("20.0"));
 				// Exercise & Verify
-				assertEquals("L", sut.getSize());
+				assertEquals(Strawberry.Sizes.L, sut.getSizeEnum());
 			}
 
 			@Test
@@ -101,7 +101,7 @@ public class StrawberryTest {
 				// Setup
 				Strawberry sut = new Strawberry(Strawberry.Varieties.AMAOU, new BigDecimal("25.0"));
 				// Exercise & Verify
-				assertEquals("LL", sut.getSize());
+				assertEquals(Strawberry.Sizes.LL, sut.getSizeEnum());
 			}
 		}
 
