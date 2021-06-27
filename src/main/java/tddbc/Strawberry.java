@@ -31,7 +31,7 @@ public class Strawberry {
 	/** いちごの品種 */
 	private Varieties variety;
 	/** いちごのサイズ */
-	private Sizes sizeEnum;
+	private Sizes size;
 
 	/**
 	 * いちごを表すクラス.
@@ -40,7 +40,7 @@ public class Strawberry {
 	 */
 	public Strawberry(Varieties variety, Sizes size) {
 		this.variety = variety;
-		this.sizeEnum = size;
+		this.size = size;
 	}
 
 	/**
@@ -51,13 +51,13 @@ public class Strawberry {
 	public Strawberry(Varieties variety, BigDecimal weightInGram) {
 		this.variety = variety;
 		if (new BigDecimal(10).compareTo(weightInGram) > 0) {
-			this.sizeEnum = Sizes.S;
+			this.size = Sizes.S;
 		} else if (new BigDecimal(20).compareTo(weightInGram) > 0) {
-			this.sizeEnum = Sizes.M;
+			this.size = Sizes.M;
 		} else if (new BigDecimal(25).compareTo(weightInGram) > 0) {
-			this.sizeEnum = Sizes.L;
+			this.size = Sizes.L;
 		} else {
-			this.sizeEnum = Sizes.LL;
+			this.size = Sizes.LL;
 		}
 	}
 
@@ -66,7 +66,7 @@ public class Strawberry {
 	 * @return イチゴの文字列表現
 	 */
 	public String getVarietyAndSize() {
-		return variety.name + ": " + sizeEnum.name;
+		return variety.name + ": " + size.name;
 	}
 
 	/**
@@ -82,6 +82,6 @@ public class Strawberry {
 	 * @return サイズ
 	 */
 	public Sizes getSize() {
-		return sizeEnum;
+		return size;
 	}
 }
